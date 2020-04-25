@@ -10,7 +10,6 @@ import {
 
 import LinearGradient from 'react-native-linear-gradient';
 //import LinearGradient Componet to make Linear Gradient
-import LinearTextGradient from 'react-native-text-gradient'
 
 export default (props) => {
     return(
@@ -22,7 +21,9 @@ export default (props) => {
             >
             <TouchableOpacity 
                 style={styles.buttonContainer}
-                onPress={props.onPress}>
+                onPress={props.onPress}
+                activeOpacity= {0.7}
+            >
                 <Image 
                     source={require('../assets/images/profile.png')} 
                 />

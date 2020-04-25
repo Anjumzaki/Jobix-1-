@@ -11,19 +11,15 @@ const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 
-export default () => {
+export default ({navigation}) => {
     return(
         <View style={styles.Container}>
-            <Image
-                style={styles.Header}
-                source={require('../assets/images/Rectangle.png')} 
-            />
-
             <MessageList
                 source={require('../assets/images/Photo1.png')}
                 Name='Jane T'
                 Time='11 min ago'
                 Message= 'Je suis intéressé par votre entreprise'
+                onPress={() => navigation.navigate('Chat')}
             />
 
             <MessageList
@@ -31,6 +27,7 @@ export default () => {
                 Name='Compagnie C'
                 Time='1 day ago'
                 Message= 'Je suis intéressé par votre entreprise'
+                onPress={() => navigation.navigate('Chat')}
             />
 
             <MessageList
@@ -38,6 +35,7 @@ export default () => {
                 Name='Compagnie C'
                 Time='2 days ago'
                 Message= 'Je suis intéressé par votre entreprise'
+                onPress={() => navigation.navigate('Chat')}
             />
 
             <MessageList
@@ -45,6 +43,7 @@ export default () => {
                 Name='Mike W.'
                 Time='2 days ago'
                 Message= 'Je suis intéressé par votre entreprise'
+                onPress={() => navigation.navigate('Chat')}
             />
 
             <MessageList
@@ -52,6 +51,7 @@ export default () => {
                 Name='Abe T.'
                 Time='2 days ago'
                 Message= 'Je suis intéressé par votre entreprise'
+                onPress={() => navigation.navigate('Chat')}
             />
 
             <MessageList
@@ -59,6 +59,7 @@ export default () => {
                 Name='Compagnie A'
                 Time='1 mon ago'
                 Message= 'Je suis intéressé par votre entreprise'
+                onPress={() => navigation.navigate('Chat')}
             />
         </View>
     )
@@ -69,9 +70,5 @@ const styles = StyleSheet.create({
       height: windowHeight,
       width: windowWidth,
       backgroundColor:'#fff',
-  },
-  Header:{
-      marginTop:'-15%',
-      height: 56
   }
 })

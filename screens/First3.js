@@ -21,6 +21,7 @@ export default ({navigation}) => {
               source = {require('../assets/images/unemployeur.png')} 
           />
           <TransparentButton 
+              style={{marginTop:20}}
               text= 'Je cherche un employeur'
               source={require('../assets/images/arrow.png')}
               onPress={() => navigation.navigate('LoginWorker')}/>
@@ -32,20 +33,20 @@ export default ({navigation}) => {
 
 const styles = StyleSheet.create({
   Container:{
-      height: windowHeight,
-      width: windowWidth,
-      alignItems: 'center',
-      backgroundColor:'#fff',
-  },
-  Logo:{
-        marginTop: '15%'
-  },
-  EmployeeContainer:{
-    flexDirection:'column',
+    height: windowHeight,
+    width: windowWidth,
     alignItems: 'center',
-    justifyContent: 'center'
-  },
-  Employer:{
-      marginTop: '10%'
-  }
+    backgroundColor: '#fff',
+    // paddingTop: HEIGHT,
+    justifyContent:'space-evenly',
+    paddingBottom:25
+},
+Logo:{
+      marginTop: '15%'
+},
+EmployeeContainer:{
+  flexDirection:'column',
+  alignItems: 'center',
+  justifyContent: 'center'
+},
 });

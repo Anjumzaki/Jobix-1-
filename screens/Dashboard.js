@@ -39,12 +39,12 @@ export default ({navigation})=> {
             <ProfileDetails
                 source={require('../assets/images/Message.png')}
                 DetailsText= 'Message en attente'
-                DetailsNumber= {6}    
+                DetailsNumber= {6}
+                onPress={() => navigation.navigate('Message')}    
             />
             <GradientButton 
                 style={styles.Button}
                 ButtonText='Mettre a jour mon profil'
-                onPress={() => navigation.navigate('Message')}
             />
         </View>
     )

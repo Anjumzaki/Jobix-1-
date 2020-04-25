@@ -10,11 +10,12 @@ import {
 
 import LinearGradient from 'react-native-linear-gradient';
 //import LinearGradient Componet to make Linear Gradient
-import LinearTextGradient from 'react-native-text-gradient'
 
 export default (props) => {
     return(
-        <View style={styles.Button}>
+        <View
+            style={props.style}     
+        >
             <LinearGradient
                 colors={['#df3bb0', '#8000FF']}
                 start={{x: 0.0, y: 1.0}} end={{x: 1.0, y: 1.0}}
@@ -22,6 +23,7 @@ export default (props) => {
             >
             <TouchableOpacity 
                 style={styles.buttonContainer}
+                activeOpacity= {0.7}
                 onPress={props.onPress}>
                 <Text style={styles.buttonText}>
                     {props.text}
@@ -34,30 +36,22 @@ export default (props) => {
 
 const styles = StyleSheet.create({
     Button:{
-        marginTop:20,
-        marginBottom:20
+        marginBottom:10,
+        // backgroundColor:blue
     },
     Gradient:{
-        height: 48, 
-        width: 300, 
-        alignItems: 'center', 
-        justifyContent: 'center', 
-        width: 300, 
-        borderRadius: 25,
+        paddingHorizontal:2,
+        paddingVertical:2,
+        borderRadius:20,
+        width: 300
     },
     buttonContainer: {
-        width: 300,
-        alignItems: 'center',
-        borderRadius: 25
+        backgroundColor:'white',
+        paddingVertical:10,
+        paddingHorizontal:20,
+        borderRadius:20
     },
-    buttonText: {
-        textAlign: 'center',
-        color: '#8000FF',
-        backgroundColor:'#ffffff',
-        padding: 10,
-        width: 296,
-        borderRadius: 25,
-        height: 44,
-        fontSize: 16
-  }
+    buttonText:{
+        textAlign: 'center'
+    }
 })

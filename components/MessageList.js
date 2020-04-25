@@ -4,7 +4,8 @@ import {
     Dimensions,
     View, 
     Text,
-    Image
+    Image,
+    TouchableOpacity
 } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -12,7 +13,11 @@ const windowWidth = Dimensions.get('window').width;
 
 export default (props)=> {
     return(
-        <SafeAreaView style={styles.Container}>
+        <TouchableOpacity 
+            activeOpacity={0.6}
+            style={styles.Container}
+            onPress={props.onPress}
+        >
             <Image
                     style={styles.image}
                     source={props.source}
@@ -35,7 +40,7 @@ export default (props)=> {
                         </Text>
                 </View>
             </View>
-        </SafeAreaView>
+        </TouchableOpacity>
     )
 }
 

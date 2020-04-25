@@ -4,12 +4,17 @@ import {
     Dimensions,
     View, 
     Text,
-    Image
+    Image,
+    TouchableOpacity
 } from 'react-native'
 
 export default (props)=> {
     return(
-        <View style={styles.ProfileDetails}>
+        <TouchableOpacity
+            activeOpacity={0.5}
+            style={styles.ProfileDetails}
+            onPress={props.onPress}
+         > 
             <View style={styles.image}>
                 <Image
                     source={props.source}
@@ -21,7 +26,7 @@ export default (props)=> {
             <Text style={styles.Number}>
                 {props.DetailsNumber}
             </Text>
-        </View>
+        </TouchableOpacity>
     )
 }
 

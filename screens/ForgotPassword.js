@@ -28,7 +28,8 @@ export default ({navigation}) => {
             source={require('../assets/images/UserName.png')}
             placeholder='E-mail'
           />
-          <TransparentButton 
+          <TransparentButton
+            style={{marginTop:25}} 
             text= 'SEND'
             onPress={() => navigation.navigate('LoginWorker')}/>
           <TouchableOpacity 
